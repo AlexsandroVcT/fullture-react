@@ -14,7 +14,7 @@ function Inicial() {
         <div>
             <div>{imagens}</div>
             <div>
-                <h2>Filmes Populares`(Div dos cards)`</h2>
+                <h2>Filmes Populares</h2>
                 <Cards />
             </div>
             <Footer texto="LexFlix 2002 Todos os direitos resevados" />

@@ -3,6 +3,7 @@ import { Pegarfilmes } from "../assets/api/api";
 
 export function Cards() {
     const [filmes, setFilmes] = useState();
+    const base_url = 'https://image.tmdb.org/t/p/w500/';
 
     useEffect(() => {
         Pegarfilmes(setFilmes)
@@ -12,15 +13,14 @@ export function Cards() {
         <div>{!filmes ? "loading" : <>
             {filmes.map((filme) => {
                 return (
-                    <>
-                        <p>{filme.title}</p>
-                        <p>{filme.vote_averege}</p>
-                    </>
+                    <div className="filmes">
+                        <img src={base_url + filme.poster_path} alt='post'></img>
+                        <p>{`titulo: ${filme.title}`}</p>
+                        <p>{`Nota: ${filme.vote_average}`}</p>
+                    </div>
                 )
 
-
             })}
-
         </>}
         </div>
     )
