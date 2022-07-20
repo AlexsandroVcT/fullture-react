@@ -9,6 +9,8 @@ function Inicial() {
         setTimeout(() => setImagens("Novo valor"), 3000)
     }, [])
 
+    const pageName = "Home"
+
     return (
         //Sempre utilizar a div Pai
         <div>
@@ -17,7 +19,7 @@ function Inicial() {
                 <h2>Filmes Populares</h2>
                 <Cards />
             </div>
-            <Footer texto="LexFlix 2002 Todos os direitos resevados" />
+            <Footer texto={`LexFlix 2002 Todos os direitos resevados. | ${pageName}`} />
         </div>
     )
 };

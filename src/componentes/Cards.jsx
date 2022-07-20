@@ -10,10 +10,12 @@ export function Cards() {
     }, [])
 
     return (
-        <div>{!filmes ? "loading" : <>
+        <div>
+            {!filmes ?
+            "loading" : <>
             {filmes.map((filme) => {
                 return (
-                    <div className="filmes">
+                    <div key={filme.id}>
                         <img src={base_url + filme.poster_path} alt='post'></img>
                         <p>{`titulo: ${filme.title}`}</p>
                         <p>{`Nota: ${filme.vote_average}`}</p>

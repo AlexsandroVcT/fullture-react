@@ -3,11 +3,12 @@ import { Header } from "../componentes/Header";
 
 
 function Detalhes() {
+    const pageName = "Detalhes"
     return (
         <div>
             <Header />
             <main>Div do meio</main>
-            <Footer />
+            <Footer texto={`LexFlix 2002 Todos os direitos resevados. | ${pageName}`} />
 
         </div>
     )
