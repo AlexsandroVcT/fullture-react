@@ -1,26 +1,33 @@
-import { Footer } from "../componentes/Footer";
-import { Cards } from "../componentes/Cards";
+import { Footer } from "../../componentes/Footer";
+import { Cards } from "../../componentes/Cards";
 import { useEffect, useState } from "react";
+import { Pai, Titulo } from "./InicialStyle";
+
+
 
 function Inicial() {
     const [imagens, setImagens] = useState("Div da imagem");
+    const [cor, setCor] = useState("#1316cb")
 
     useEffect(() => {
-        setTimeout(() => setImagens("Novo valor"), 3000)
+        setImagens("Novo valor")
     }, [])
 
     const pageName = "Home"
 
     return (
         //Sempre utilizar a div Pai
-        <div>
+        <Pai color={`${cor}`}> {/** passando cor como props*/}
             <div>{imagens}</div>
             <div>
                 <h2>Filmes Populares</h2>
+                <h2>Filmes Populares</h2>
+                <h2>Filmes Populares</h2>
+                {/* <Titulo>Filmes Populares</Titulo> */}
                 <Cards />
             </div>
             <Footer texto={`LexFlix 2002 Todos os direitos resevados. | ${pageName}`} />
-        </div>
+        </Pai>
     )
 };
 

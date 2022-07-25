@@ -12,18 +12,18 @@ export function Cards() {
     return (
         <div>
             {!filmes ?
-            "loading" : <>
-            {filmes.map((filme) => {
-                return (
-                    <div key={filme.id}>
-                        <img src={base_url + filme.poster_path} alt='post'></img>
-                        <p>{`titulo: ${filme.title}`}</p>
-                        <p>{`Nota: ${filme.vote_average}`}</p>
-                    </div>
-                )
+                "loading" : <>
+                    {filmes.map((filme) => {
+                        return (
+                            <div key={filme.id}>
+                                <img src={base_url + filme.poster_path} alt='post'></img>
+                                <p>{`titulo: ${filme.title}`}</p>
+                                <p>{`Nota: ${filme.vote_average}`}</p>
+                            </div>
+                        )
 
-            })}
-        </>}
+                    })}
+                </>}
         </div>
     )
 

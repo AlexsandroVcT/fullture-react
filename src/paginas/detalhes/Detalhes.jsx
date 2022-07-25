@@ -1,5 +1,5 @@
-import { Footer } from "../componentes/Footer";
-import { Header } from "../componentes/Header";
+import { Footer } from "../../componentes/Footer";
+import { Header } from "../../componentes/Header";
 
 
 function Detalhes() {

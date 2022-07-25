@@ -1,6 +1,6 @@
 // import Detalhes from "./paginas/Detalhes";
-import Detalhes from "./paginas/Detalhes";
-import Inicial from "./paginas/Inicial";
+import Detalhes from "./paginas/detalhes/Detalhes";
+import Inicial from "./paginas/inicial/Inicial";
 
 
 function App() {
