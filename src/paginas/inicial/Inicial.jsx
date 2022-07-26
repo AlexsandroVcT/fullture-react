@@ -1,7 +1,7 @@
 import { Footer } from "../../componentes/Footer";
 import { Cards } from "../../componentes/Cards";
 import { useEffect, useState } from "react";
-import { Pai, Titulo } from "./InicialStyle";
+import { Pai, Parte1, Parte2 } from "./InicialStyle";
 
 
 
@@ -16,17 +16,20 @@ function Inicial() {
     const pageName = "Home"
 
     return (
-        //Sempre utilizar a div Pai
-        <Pai color={`${cor}`}> {/** passando cor como props*/}
-            <div>{imagens}</div>
-            <div>
+        //Sempre utilizar a div Pai {div}
+        <Pai>
+
+            <div className="imagemInicial">{imagens}</div>
+            <Parte1>
                 <h2>Filmes Populares</h2>
-                <h2>Filmes Populares</h2>
-                <h2>Filmes Populares</h2>
-                {/* <Titulo>Filmes Populares</Titulo> */}
+            </Parte1>
+
+            <Parte2>
                 <Cards />
-            </div>
+            </Parte2>
+
             <Footer texto={`LexFlix 2002 Todos os direitos resevados. | ${pageName}`} />
+
         </Pai>
     )
 };
