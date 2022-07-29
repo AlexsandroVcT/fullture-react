@@ -1,14 +1,10 @@
-// import Detalhes from "./paginas/Detalhes";
-import Detalhes from "./paginas/detalhes/Detalhes";
-import Inicial from "./paginas/inicial/Inicial";
+import { RouterDom } from "./assets/router/RouterDom";
 
 
 function App() {
   return (
     <div>
-      <Inicial />
-      <Detalhes />
-
+      <RouterDom />
     </div>
   );
 }

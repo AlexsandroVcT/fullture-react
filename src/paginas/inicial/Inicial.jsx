@@ -1,5 +1,5 @@
-import { Footer } from "../../componentes/Footer";
-import { Cards } from "../../componentes/Cards";
+import { Footer } from "../../componentes/footer/Footer";
+import { Cards } from "../../componentes/cards/Cards";
 import { useEffect, useState } from "react";
 import { Pai, Parte1, Parte2 } from "./InicialStyle";
 
@@ -28,7 +28,7 @@ function Inicial() {
                 <Cards />
             </Parte2>
 
-            <Footer texto={`LexFlix 2002 Todos os direitos resevados. | ${pageName}`} />
+            <Footer texto={`LEXFLIX ® 2022, Todos os direitos reservados. |`} />
 
         </Pai>
     )

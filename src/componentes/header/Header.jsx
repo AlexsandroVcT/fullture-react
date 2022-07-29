@@ -3,7 +3,7 @@
 export const Header = () => {
     return (
         <header>
-            HOME
+            Header
         </header>
     )
 }
