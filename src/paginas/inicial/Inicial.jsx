@@ -7,13 +7,11 @@ import { Pai, Parte1, Parte2 } from "./InicialStyle";
 
 function Inicial() {
     const [imagens, setImagens] = useState("Div da imagem");
-    const [cor, setCor] = useState("#1316cb")
+
 
     useEffect(() => {
         setImagens("Novo valor")
     }, [])
-
-    const pageName = "Home"
 
     return (
         //Sempre utilizar a div Pai {div}
@@ -28,7 +26,7 @@ function Inicial() {
                 <Cards />
             </Parte2>
 
-            <Footer texto={`LEXFLIX ® 2022, Todos os direitos reservados. |`} />
+            <Footer texto={`LEXFLIX ® 2022, Todos os direitos reservados. | Home`} />
 
         </Pai>
     )

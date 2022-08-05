@@ -1,14 +1,27 @@
 import { useEffect, useState } from "react";
-import { Pegarfilmes } from "../../assets/api/api";
+import { PegarDetalhes, Pegarfilmes } from "../../assets/api/api";
 import { Container, Grid } from "../cards/CardsSTyle";
+import { useDispatch } from "react-redux";
+import { getMovieDetail } from "../../assets/redux/slice";
 
 // const base_url = 'https://image.tmdb.org/t/p/w500/';
 export function Cards() {
     const [filmes, setFilmes] = useState();
+    const [detalhes, setDetalhes] = useState();
+    const dispatch = useDispatch()
 
     useEffect(() => {
         Pegarfilmes(setFilmes);
     }, []);
+
+    useEffect(() => {
+        dispatch(getMovieDetail(detalhes))
+    }, [detalhes])
+
+    const onHoverDetail = (e) => {
+        PegarDetalhes(e.target.id, setDetalhes)
+    }
+
 
     return (
         <Grid to="/detalhe">
@@ -18,7 +31,7 @@ export function Cards() {
                 <>
                     {filmes.map((filme) => {
                         return (
-                            <Container key={filme.id}>
+                            <Container key={filme.id} id={filme.id} onMouseEnter={onHoverDetail}>
                                 <img
                                     src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`}
                                     alt=""

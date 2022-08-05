@@ -25,6 +25,7 @@ text-decoration: none;
     font-size: 2vh;
     color: #FFD700;
     padding: 5px;
+    text-decoration: none;
 }
 img{
     width: 100%;
@@ -42,6 +43,7 @@ padding: 10vh 0;
 width: 80%;
 gap: 3vw;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+text-decoration: none;
 
 
 `

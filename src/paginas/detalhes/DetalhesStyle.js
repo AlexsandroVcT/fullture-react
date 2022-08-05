@@ -29,8 +29,8 @@ a{
     width: 14vw;
     border: 0;
     border-radius: 1.5vw;
-    background-color: #c62924;
-    color: #fff;
+    background-color: #401a76;
+    color: #fffbf4;
     font-size: 1.5vw;
     cursor: pointer;
     text-decoration: none;
